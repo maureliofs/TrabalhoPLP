@@ -3,8 +3,8 @@ package entidade;
 public class Moto extends Veiculo {
     private int cilindradas;
 
-    public Moto(String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, int cilindradas) {
-        super(marca, modelo, ano, cor, potencia, tipoCombustivel, placa);
+    public Moto(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, int cilindradas) {
+        super(id, marca, modelo, ano, cor, potencia, tipoCombustivel, placa);
         setCilindradas(cilindradas);
     }
 

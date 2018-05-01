@@ -1,6 +1,9 @@
 package entidade;
 
-public abstract class Veiculo {
+import java.io.Serializable; //condição para que o objeto seja transformado em binario no arquivo
+
+public abstract class Veiculo implements Serializable {
+    private int id;
     private String marca;
     private String modelo;
     private int ano;
@@ -10,7 +13,8 @@ public abstract class Veiculo {
     private String placa;
     private String dataCadastro;
 
-    public Veiculo(String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa) {
+    public Veiculo(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa) {
+        setId(id);
         setMarca(marca);
         setModelo(modelo);
         setAno(ano);
@@ -90,5 +94,13 @@ public abstract class Veiculo {
 
     public String getDataCadastro() {
         return this.dataCadastro;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
     }
 }
