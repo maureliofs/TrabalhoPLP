@@ -1,4 +1,12 @@
-package dao;
+/*/* 
+ * Trabalho de GCC198 - Paradigmas de Linguagens de Programação
+ * Cadastro de Veículos 
+ * Copyright 2018 by Marco Aurélio Ferreira de Sousa 
+ * Classe responsavel por toda a manipulação do arquivo onde
+ * sera guardado todo o banco de dados do programa.
+ */
+
+ package dao;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,9 +30,15 @@ import java.io.BufferedReader;
 
 public class ManipuladorDeArquivo implements Serializable{ //criando classe
 
+    private static final long serialVersionUID = -5999520871774420561L;
     private File arquivoDeDados; //criando atributo
     private final String caminhoArquivoDeDados = "../data/data.bin";
 
+
+    /**
+     * Metodo responsavel por criar o arquivo onde
+     * será salvo o banco de dados do programa
+     */
     public ManipuladorDeArquivo() { //criando construtor da classe
         this.arquivoDeDados = new File(this.caminhoArquivoDeDados);
         if (!this.arquivoDeDados.exists()) {
@@ -33,14 +47,17 @@ public class ManipuladorDeArquivo implements Serializable{ //criando classe
                 this.arquivoDeDados.createNewFile();
                 iniciaArquivo();
             } catch (IOException e) {
-
+                System.out.println(e.toString());
             } catch (Exception e) {
-
+                System.out.println(e.toString());
             }
            
         }
     }
 
+    /**
+     * Metodo responsavel por iniciar o arquivo de dados
+     */
     private void iniciaArquivo() {
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.caminhoArquivoDeDados));
@@ -48,9 +65,16 @@ public class ManipuladorDeArquivo implements Serializable{ //criando classe
             oos.flush();
             oos.close();
         } catch (Exception e) {
-
+            System.out.println(e.toString());
         }
     }
+
+    /**
+     * Metodo responsavel por salvar no arquivo
+     * o veiculo inserido pelo usuario
+     * 
+     * @param veiculo veiculo inserido
+     */
     public void salvaVeiculo(Veiculo veiculo) {
         try {
             List<Veiculo> veiculosAtuais = leVeiculos();
@@ -60,28 +84,39 @@ public class ManipuladorDeArquivo implements Serializable{ //criando classe
             oos.flush();
             oos.close();
         } catch (Exception e) {
-
+            System.out.println(e.toString());
         }
     }
-    public void salvaVeiculo(List<Veiculo> veiculo) {
+
+    /**
+     * Metodo responsavel por salvar no arquivo
+     * a lista de  veiculos inserido pelo usuario
+     * 
+     * @param veiculo lista de veiculos inseridos
+     */
+    public void salvaVeiculo(List<Veiculo> veiculo) { //sobrcarga de metodo salvaVeiculo, um recebe um objeto veiculo e o outros recebe uma lista de veiculos
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(this.caminhoArquivoDeDados, false));
             oos.writeObject(veiculo);
             oos.flush();
             oos.close();
         } catch (Exception e) {
-
+            System.out.println(e.toString());
         }
     }
 
+    /**
+     * Metodo responsavel por ler o arquivo 
+     * e devolver para o usuário o veiculo buscado.
+     * 
+     * @return List<Veiculo> veiculos
+     */
     public List<Veiculo> leVeiculos() {
         List<Veiculo> veiculos = new ArrayList<Veiculo>();
-        try
-        {
+        try {
             FileInputStream arq = new FileInputStream("../data/data.bin");
             ObjectInputStream loadArq = new ObjectInputStream(arq);
-            while(arq.available() > 0)
-            {
+            while(arq.available() > 0) {
                 veiculos = (ArrayList<Veiculo>) loadArq.readObject();
             }
             arq.close();
@@ -94,6 +129,6 @@ public class ManipuladorDeArquivo implements Serializable{ //criando classe
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-        return veiculos;
+       return veiculos;
     }
 }

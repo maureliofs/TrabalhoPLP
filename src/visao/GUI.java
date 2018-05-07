@@ -1,4 +1,11 @@
-package visao;
+/* 
+ * Trabalho de GCC198 - Paradigmas de Linguagens de Programação
+ * Cadastro de Veículos 
+ * Copyright 2018 by Marco Aurélio Ferreira de Sousa 
+ * Classe responsavel por descrever toda a interface para o usuario. 
+ */
+
+ package visao;
 
 import java.util.Scanner;
 

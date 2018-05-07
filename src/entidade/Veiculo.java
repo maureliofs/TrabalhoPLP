@@ -1,8 +1,18 @@
+/* 
+ * Trabalho de GCC198 - Paradigmas de Linguagens de Programação
+ * Cadastro de Veículos 
+ * Copyright 2018 by Marco Aurélio Ferreira de Sousa 
+ * Classe responsável por descrever a super classe veiculo de uma 
+ * forma geral e seus atributos, ler do teclado as informações 
+ * inseridas pelo usuário e retornar para o sistema.
+ */
+
 package entidade;
 
 import java.io.Serializable; //condição para que o objeto seja transformado em binario no arquivo
 
-public abstract class Veiculo implements Serializable {
+public abstract class Veiculo implements Serializable { //interface do java que transforma objetos alocados em heap para formato de stream binario.
+    private static final long serialVersionUID = -5999520871774420561L;
     private int id;
     private String marca;
     private String modelo;
@@ -13,7 +23,7 @@ public abstract class Veiculo implements Serializable {
     private String placa;
     private String dataCadastro;
 
-    public Veiculo(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa) {
+    public Veiculo(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, String data) {
         setId(id);
         setMarca(marca);
         setModelo(modelo);
@@ -22,14 +32,14 @@ public abstract class Veiculo implements Serializable {
         setPotencia(potencia);
         setTipoCombustivel(tipoCombustivel);
         setPlaca(placa);
-        setDataCadastro("kkkk");
+        setDataCadastro(data);
     }
 
-    public void setMarca(String marca) {
+    public void setMarca(String marca) { //modificando o estado do atributo
         this.marca = marca;
     }
 
-    public String getMarca() {
+    public String getMarca() { //retornando o estado dos atributos
         return this.marca;
     }
 
@@ -87,7 +97,6 @@ public abstract class Veiculo implements Serializable {
         return this.placa;
     }
 
-
     public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
@@ -102,5 +111,20 @@ public abstract class Veiculo implements Serializable {
 
     public int getId() {
         return this.id;
+    }
+
+    //sobreescrita do metodo toString da classe object
+    @Override
+    public String toString() {
+        return this.hashCode() +
+        " " + getId() + 
+        " " + getMarca() + 
+        " " + getModelo() + 
+        " " + getAno() +
+        " " + getCor() +
+        " " + getPotencia() +
+        " " + getTipoCombustivel() +
+        " " + getPlaca() +
+        " " + getDataCadastro();
     }
 }

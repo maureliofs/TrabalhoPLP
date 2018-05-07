@@ -1,5 +1,12 @@
-package app;
+/* 
+ * Trabalho de GCC198 - Paradigmas de Linguagens de Programação
+ * Cadastro de Veículos 
+ * Copyright 2018 by Marco Aurélio Ferreira de Sousa 
+ * Classe responsável pela execução do software.
+ * Contém o método main para ser chamado executando toda a computação.
+ */
 
+package app;
 
 public class Main {
 
