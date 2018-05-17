@@ -1,3 +1,10 @@
+/*/* 
+ * Trabalho de GCC198 - Paradigmas de Linguagens de Programação
+ * Cadastro de Veículos 
+ * Copyright 2018 by Marco Aurélio Ferreira de Sousa 
+ * Classe responsável por pegar a data do sistema
+ * e salvar no arquivo como data do cadastro.
+ */
 package utils;
 
 import java.util.Date;
@@ -5,24 +12,24 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 /**
- * This class describes a SystemData object. It is used to generate
- * date strings formatted.
+ * Esta classe descreve um objeto DataSistema. É usadada pra 
+ * gerar uma string no formato de data.
  */
 public class DataSistema {
 
     /**
-     * DateFormat java class attribute.
+     * Atributo da classe DateFormat
      */
     private DateFormat dateFormat;
 
     /**
-     * Date java class attribute.
+     * Atributo classe Date
      */
 	private Date date;
 
     /**
-     * SystemDate object constructor. He instaces the Date and
-     * dateFormat java classes.
+     * Contrutor do DataSistema. Instancia a data e o
+     * DateFormat
      */
     public DataSistema() {
         date = new Date();
@@ -30,19 +37,9 @@ public class DataSistema {
     }
 
     /**
-     * This method returns a complete date of system (date and hour).
+     * Esse metodo retorna o formato da data formatada
      * 
-     * @return String Date formatted with hour.
-     */
-    public String returnCompleteDate() {
-        return dateFormat.format(date);
-    }
-
-    /**
-     * This method returns only Date formatted, without
-     * system hour.
-     * 
-     * @return String String date formatted without hour.
+     * @return String String date formatted.
      */
     public String returnOnlyDate() {
         dateFormat = new SimpleDateFormat("dd-MM-yyyy");

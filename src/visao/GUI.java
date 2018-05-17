@@ -17,7 +17,9 @@ import entidade.Caminhao;
 
 import java.util.List;
 import java.util.ArrayList;
-
+/**
+ * Classe responsável por toda a interface do programa
+ */
 public class GUI {
 
     private Scanner scanner;
@@ -26,7 +28,10 @@ public class GUI {
 
         this.scanner = new Scanner(System.in);
     }
-
+    /**
+     * Método responsável por pegar a opção do usuário
+     * referente às operações disponíveis.
+     */
     public int pegarOpcaoMenu() {
         clean();
         System.out.println("Bem vindo ao Sistema de Cadastro de Veiculos");
@@ -42,10 +47,17 @@ public class GUI {
         
     }
 
-    public void printarMensagem(String mensagem) { //metodo para printar mensagem
+    /**
+     * Método para printar na tela
+     */
+    public void printarMensagem(String mensagem) {
         System.out.println(mensagem);
     }
 
+    /**
+     * Método para cadastrar um veículo e mostrar ao usuário
+     * os tipos disponíveis de veiculo.
+     */
     public int cadastraVeiculo() {
         clean();
         System.out.println("Cadastrar novo veiculo:");
@@ -53,119 +65,19 @@ public class GUI {
         return this.scanner.nextInt();
     }
 
-    private void clean() { //metodo para limpar o console
+    /**
+     * Método responsável por limpar o console
+     */
+    private void clean() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
-    public List<String> getCadastraCaminhaoInformacoes() {
-        List<String> informacoes = new ArrayList<String>();
-        clean();
-        System.out.println("Adicionando Caminhao...");
-
-        System.out.print("Digite o ID: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a marca: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o modelo: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o ano: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a cor: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a potencia em cv: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o tipo de combustivel: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a placa: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a quantidade de eixos: ");
-        informacoes.add(this.scanner.next());
-
-        return informacoes;
-
-    }
-
-    public List<String> getCadastraMotoInformacoes() {
-        List<String> informacoes = new ArrayList<String>();
-        clean();
-        System.out.println("Adicionando Moto...");
-
-        System.out.print("Digite o ID: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a marca: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o modelo: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o ano: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a cor: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a potencia em cv: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o tipo de combustivel: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a placa: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a quantidade de cilindradas: ");
-        informacoes.add(this.scanner.next());
-
-        return informacoes;
-
-    }
-
-    public List<String> getCadastraCamioneteInformacoes() {
-        List<String> informacoes = new ArrayList<String>();
-        clean();
-        System.out.println("Adicionando Camionete...");
-
-        System.out.print("Digite o ID: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a marca: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o modelo: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o ano: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a cor: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a potencia em cv: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o tipo de combustivel: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite a placa: ");
-        informacoes.add(this.scanner.next());
-
-        System.out.print("Digite o tipo de cabine: ");
-        informacoes.add(this.scanner.next());
-
-        return informacoes;
-
-    }
-
+    /**
+     * Método responsável por receber as informações 
+     * inseridas pelo usuário ao cadastrar um Veiculo
+     * do tipo carro.
+     */
     public List<String> getCadastraCarroInformacoes() {
         List<String> informacoes = new ArrayList<String>();
         clean();
@@ -202,6 +114,133 @@ public class GUI {
 
     }
 
+    /**
+     * Método responsável por receber as informações 
+     * inseridas pelo usuário ao cadastrar um Veiculo
+     * do tipo moto.
+     */
+    public List<String> getCadastraMotoInformacoes() {
+        List<String> informacoes = new ArrayList<String>();
+        clean();
+        System.out.println("Adicionando Moto...");
+
+        System.out.print("Digite o ID: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a marca: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o modelo: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o ano: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a cor: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a potencia em cv: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o tipo de combustivel: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a placa: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a quantidade de cilindradas: ");
+        informacoes.add(this.scanner.next());
+
+        return informacoes;
+
+    }
+
+    /**
+     * Método responsável por receber as informações 
+     * inseridas pelo usuário ao cadastrar um Veiculo
+     * do tipo camionete.
+     */
+    public List<String> getCadastraCamioneteInformacoes() {
+        List<String> informacoes = new ArrayList<String>();
+        clean();
+        System.out.println("Adicionando Camionete...");
+
+        System.out.print("Digite o ID: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a marca: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o modelo: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o ano: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a cor: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a potencia em cv: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o tipo de combustivel: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a placa: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o tipo de cabine: ");
+        informacoes.add(this.scanner.next());
+
+        return informacoes;
+
+    }
+
+    /**
+     * Método responsável por receber as informações 
+     * inseridas pelo usuário ao cadastrar um Veiculo
+     * do tipo caminhão.
+     */
+    public List<String> getCadastraCaminhaoInformacoes() {
+        List<String> informacoes = new ArrayList<String>();
+        clean();
+        System.out.println("Adicionando Caminhao...");
+
+        System.out.print("Digite o ID: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a marca: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o modelo: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o ano: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a cor: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a potencia em cv: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite o tipo de combustivel: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a placa: ");
+        informacoes.add(this.scanner.next());
+
+        System.out.print("Digite a quantidade de eixos: ");
+        informacoes.add(this.scanner.next());
+
+        return informacoes;
+
+    }
+
+    /**
+     * Método responsável por apagar determinado veiculo
+     * usando o id do mesmo
+     */
     public int getRemoveInformacoes() {
         clean();
         System.out.println("Removendo Veiculo...");
@@ -211,6 +250,10 @@ public class GUI {
 
     }
 
+    /**
+     * Método responsável por buscar determinado veiculo
+     * usando o id do mesmo
+     */
     public int getBuscaInformacoes() {
         clean();
         System.out.println("Buscando Veiculo...");
@@ -220,6 +263,10 @@ public class GUI {
 
     }
 
+    /**
+     * Método responsável por imprimir as informações 
+     * que foram cadastradas do Veiculo tipo carro.
+     */
     public void imprimeCarro(Carro carro) {
         System.out.println("");
         System.out.println("ID: " + carro.getId());
@@ -235,6 +282,10 @@ public class GUI {
         System.out.println("+--------------------------------------------------------+");
     }
 
+    /**
+     * Método responsável por imprimir as informações 
+     * que foram cadastradas do Veiculo tipo moto.
+     */
     public void imprimeMoto(Moto moto) {
         System.out.println("");
         System.out.println("ID: " + moto.getId());
@@ -250,6 +301,10 @@ public class GUI {
         System.out.println("+--------------------------------------------------------+");
     }
 
+    /**
+     * Método responsável por imprimir as informações 
+     * que foram cadastradas do Veiculo tipo camionete.
+     */
     public void imprimeCamionete(Camionete camionete) {
         System.out.println("");
         System.out.println("ID: " + camionete.getId());
@@ -265,6 +320,10 @@ public class GUI {
         System.out.println("+--------------------------------------------------------+");
     }
 
+    /**
+     * Método responsável por imprimir as informações 
+     * que foram cadastradas do Veiculo tipo caminhao.
+     */
     public void imprimeCaminhao(Caminhao caminhao) {
         System.out.println("");
         System.out.println("ID: " + caminhao.getId());
@@ -280,6 +339,10 @@ public class GUI {
         System.out.println("+--------------------------------------------------------+");
     }
 
+    /**
+     * Método responsável por pedir ao usuário para teclar enter
+     * caso queira fazer outra operação no sistema.
+     */
     public void tecleEnterParaContinuar(){
         System.out.println("Tecle ENTER para continuar...");
         Scanner scanner = new Scanner(System.in);

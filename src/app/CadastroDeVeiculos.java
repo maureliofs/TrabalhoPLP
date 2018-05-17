@@ -32,7 +32,10 @@ public class CadastroDeVeiculos {
 
     }
 
-    public void execute() { //metodo para executar
+    /**
+     * Método responsável por executar o programa.
+     */
+    public void execute() {
 
         int opcao = 0;
         while(opcao != 99) {
@@ -59,7 +62,11 @@ public class CadastroDeVeiculos {
             }
         }
     }
-    //verifica se dado um id existe um veiculo registrado com o mesmo valor
+
+    /**
+     * Método responsável por verificar se dado um id, 
+     * existe um veiculo registrado com o mesmo valor.
+     */
     private Boolean existeVeiculo(int id) {
         List<Veiculo> veiculosRegistrados = this.manipuladorArquivo.leVeiculos();
         if (veiculosRegistrados.size() != 0) { 
@@ -74,6 +81,14 @@ public class CadastroDeVeiculos {
         }
     }
 
+    /**
+     * Método responsável por cadastrar o veiculo e seus atributos
+     * de acordo com o que ele deseja cadastrar.
+     * 1 - Carro
+     * 2 - Moto
+     * 3 - Camionete
+     * 4 - Caminhao
+     */
     private void cadastraVeiculo() {
         switch(this.gui.cadastraVeiculo()) {
             case 1: //veiculo for carro
@@ -168,6 +183,10 @@ public class CadastroDeVeiculos {
         
     }
 
+    /**
+     * Método responsável pela listagem do Viculo
+     * quando o usuário digitar a opção de Listar.
+     */
     private void listaVeiculo() {
         List<Veiculo> veiculos = this.manipuladorArquivo.leVeiculos();
         if (veiculos.size() != 0) { 
@@ -195,6 +214,10 @@ public class CadastroDeVeiculos {
         
     }
 
+    /**
+     * Método responsável pela remoção do Viculo
+     * quando o usuário digitar a opção de Remover.
+     */
     private void removeVeiculo(int idProcurado) {
         List<Veiculo> veiculos = this.manipuladorArquivo.leVeiculos();
         for (int i=0; i<veiculos.size(); i++) {
@@ -211,6 +234,10 @@ public class CadastroDeVeiculos {
         this.gui.tecleEnterParaContinuar();
     }
 
+    /**
+     * Método responsável pela busca do Viculo
+     * quando o usuário digitar a opção de Buscar.
+     */
     private void buscaVeiculo(int idProcurado) {
         List<Veiculo> veiculos = this.manipuladorArquivo.leVeiculos();
         for (Veiculo veiculo : veiculos) {
