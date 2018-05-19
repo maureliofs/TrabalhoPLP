@@ -10,10 +10,16 @@
 package entidade;
 
 import java.io.Serializable; //condição para que o objeto seja transformado em binario no arquivo
+
 /**
- * Interface do java que transforma objetos alocados em heap para formato de stream binario.
+ * Classe responsável por descrever a super classe veiculo de uma 
+ * forma geral e seus atributos, ler do teclado as informações 
+ * inseridas pelo usuário e retornar para o sistema.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
  */
-public abstract class Veiculo implements Serializable {
+public abstract class Veiculo implements Serializable { //Interface do java que transforma objetos alocados em heap para formato de stream binario.
     private static final long serialVersionUID = -5999520871774420561L;
     private int id;
     private String marca;
@@ -27,6 +33,16 @@ public abstract class Veiculo implements Serializable {
     
     /**
      * Instânciando o objeto Veiculo e seus atributos.
+     * 
+     * @param id Id do veiculo
+     * @param marca marca do veiculo
+     * @param modelo modelo do veiculo
+     * @param ano ano de lançamento do veiculo
+     * @param cor cor do veiculo
+     * @param potencia potencia do veiculo em cv
+     * @param tipoCombustivel tipo de combustivel do veiculo
+     * @param placa placa do veiculo
+     * @param data data do cadastro do veiculo
      */
     public Veiculo(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, String data) {
         setId(id);
@@ -41,6 +57,8 @@ public abstract class Veiculo implements Serializable {
     }
     /**
      * Método pra modificar o estado do atributo marca
+     * 
+     * @param marca marca do veiculo
      */
     public void setMarca(String marca) {
         this.marca = marca;
@@ -56,6 +74,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo modelo
+     * 
+     * @param modelo modelo do veiculo
      */
     public void setModelo(String modelo) {
         this.modelo = modelo;
@@ -71,6 +91,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo ano
+     * 
+     * @param ano ano do veiculo
      */
     public void setAno(int ano) {
         this.ano = ano;
@@ -86,6 +108,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo cor
+     * 
+     * @param cor cor do veiculo
      */
     public void setCor(String cor) {
         this.cor = cor;
@@ -101,6 +125,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo potencia
+     * 
+     * @param potencia potencia do veiculo
      */
     public void setPotencia(int potencia) {
         this.potencia = potencia;
@@ -116,6 +142,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo tipoCombustivel
+     * 
+     * @param tipoCombustivel tipo de combustivel do veiculo
      */
     public void setTipoCombustivel(String tipoCombustivel) {
         this.tipoCombustivel = tipoCombustivel;
@@ -131,6 +159,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo placa
+     * 
+     * @param placa placa do veiculo
      */
     public void setPlaca(String placa) {
         this.placa = placa;
@@ -146,6 +176,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo dataCadastro
+     * 
+     * @param dataCadastro data de cadastro do veiculo
      */
     public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
@@ -161,6 +193,8 @@ public abstract class Veiculo implements Serializable {
 
     /**
      * Método pra modificar o estado do atributo id
+     * 
+     * @param id id do veiculo
      */
     public void setId(int id) {
         this.id = id;

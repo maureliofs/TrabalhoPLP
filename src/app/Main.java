@@ -7,7 +7,13 @@
  */
 
 package app;
-
+/**
+ * Classe responsável pela execução do software.
+ * Contém o método main para ser chamado executando toda a computação.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
+ */
 public class Main {
 
     public static void main(String[] args) {

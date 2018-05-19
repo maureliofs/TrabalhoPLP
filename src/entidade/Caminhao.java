@@ -9,6 +9,15 @@
 
 package entidade;
 
+
+/**
+ * Classe responsavel por descrever a sub classe Caminhao e
+ * usando o conceito de herança para herdar os atributos da
+ * classe pai (Veiculo), além de implementar seus atributos especificos.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
+ */
 public class Caminhao extends Veiculo {
 
     /**
@@ -29,6 +38,7 @@ public class Caminhao extends Veiculo {
      * @param tipoCombustivel tipo de combustivel do caminhão
      * @param placa placa do caminhão
      * @param qtdeEixos numero referente às quantidade de eixos do caminhão
+     * @param data data do cadastro do caminhao
      */
     public Caminhao(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, int qtdeEixos, String data) {
         super(id, marca, modelo, ano, cor, potencia, tipoCombustivel, placa, data);

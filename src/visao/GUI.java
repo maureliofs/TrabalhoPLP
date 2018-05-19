@@ -17,8 +17,12 @@ import entidade.Caminhao;
 
 import java.util.List;
 import java.util.ArrayList;
+
 /**
  * Classe responsável por toda a interface do programa
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
  */
 public class GUI {
 
@@ -31,6 +35,8 @@ public class GUI {
     /**
      * Método responsável por pegar a opção do usuário
      * referente às operações disponíveis.
+     * 
+     * @return Integer
      */
     public int pegarOpcaoMenu() {
         clean();
@@ -49,6 +55,8 @@ public class GUI {
 
     /**
      * Método para printar na tela
+     * 
+     * @param mensagem texto à ser printado na tela
      */
     public void printarMensagem(String mensagem) {
         System.out.println(mensagem);
@@ -57,6 +65,8 @@ public class GUI {
     /**
      * Método para cadastrar um veículo e mostrar ao usuário
      * os tipos disponíveis de veiculo.
+     * 
+     * @return Integer
      */
     public int cadastraVeiculo() {
         clean();
@@ -77,6 +87,8 @@ public class GUI {
      * Método responsável por receber as informações 
      * inseridas pelo usuário ao cadastrar um Veiculo
      * do tipo carro.
+     * 
+     * @return List
      */
     public List<String> getCadastraCarroInformacoes() {
         List<String> informacoes = new ArrayList<String>();
@@ -118,6 +130,8 @@ public class GUI {
      * Método responsável por receber as informações 
      * inseridas pelo usuário ao cadastrar um Veiculo
      * do tipo moto.
+     * 
+     * @return List
      */
     public List<String> getCadastraMotoInformacoes() {
         List<String> informacoes = new ArrayList<String>();
@@ -159,6 +173,8 @@ public class GUI {
      * Método responsável por receber as informações 
      * inseridas pelo usuário ao cadastrar um Veiculo
      * do tipo camionete.
+     * 
+     * @return List
      */
     public List<String> getCadastraCamioneteInformacoes() {
         List<String> informacoes = new ArrayList<String>();
@@ -200,6 +216,8 @@ public class GUI {
      * Método responsável por receber as informações 
      * inseridas pelo usuário ao cadastrar um Veiculo
      * do tipo caminhão.
+     * 
+     * @return List
      */
     public List<String> getCadastraCaminhaoInformacoes() {
         List<String> informacoes = new ArrayList<String>();
@@ -240,6 +258,8 @@ public class GUI {
     /**
      * Método responsável por apagar determinado veiculo
      * usando o id do mesmo
+     * 
+     * @return Integer
      */
     public int getRemoveInformacoes() {
         clean();
@@ -253,6 +273,8 @@ public class GUI {
     /**
      * Método responsável por buscar determinado veiculo
      * usando o id do mesmo
+     * 
+     * @return Integer
      */
     public int getBuscaInformacoes() {
         clean();
@@ -266,6 +288,8 @@ public class GUI {
     /**
      * Método responsável por imprimir as informações 
      * que foram cadastradas do Veiculo tipo carro.
+     * 
+     * @param carro veiculo tipo carro
      */
     public void imprimeCarro(Carro carro) {
         System.out.println("");
@@ -285,6 +309,8 @@ public class GUI {
     /**
      * Método responsável por imprimir as informações 
      * que foram cadastradas do Veiculo tipo moto.
+     * 
+     * @param moto veiculo tipo moto
      */
     public void imprimeMoto(Moto moto) {
         System.out.println("");
@@ -304,6 +330,8 @@ public class GUI {
     /**
      * Método responsável por imprimir as informações 
      * que foram cadastradas do Veiculo tipo camionete.
+     * 
+     * @param camionete veiculo tipo camionete
      */
     public void imprimeCamionete(Camionete camionete) {
         System.out.println("");
@@ -323,6 +351,8 @@ public class GUI {
     /**
      * Método responsável por imprimir as informações 
      * que foram cadastradas do Veiculo tipo caminhao.
+     * 
+     * @param caminhao veiculo tipo caminhao
      */
     public void imprimeCaminhao(Caminhao caminhao) {
         System.out.println("");

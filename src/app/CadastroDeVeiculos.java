@@ -19,6 +19,14 @@ import java.util.List;
 import java.util.ArrayList;
 import utils.DataSistema;
 
+/**
+ * Classe responsavel pelas operações ou comportamentos gerais dos veiculos 
+ * (Cadastrar, Listar, Remover e Buscar).
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
+ */
+
 public class CadastroDeVeiculos {
 
     private DataSistema dataSistema;
@@ -66,6 +74,8 @@ public class CadastroDeVeiculos {
     /**
      * Método responsável por verificar se dado um id, 
      * existe um veiculo registrado com o mesmo valor.
+     * 
+     * @param id id do veiculo
      */
     private Boolean existeVeiculo(int id) {
         List<Veiculo> veiculosRegistrados = this.manipuladorArquivo.leVeiculos();
@@ -217,6 +227,8 @@ public class CadastroDeVeiculos {
     /**
      * Método responsável pela remoção do Viculo
      * quando o usuário digitar a opção de Remover.
+     * 
+     * @param idProcurado id do veiculo a ser encontrado
      */
     private void removeVeiculo(int idProcurado) {
         List<Veiculo> veiculos = this.manipuladorArquivo.leVeiculos();
@@ -237,6 +249,8 @@ public class CadastroDeVeiculos {
     /**
      * Método responsável pela busca do Viculo
      * quando o usuário digitar a opção de Buscar.
+     * 
+     * @param idProcurado id do veiculo a ser encontrado
      */
     private void buscaVeiculo(int idProcurado) {
         List<Veiculo> veiculos = this.manipuladorArquivo.leVeiculos();

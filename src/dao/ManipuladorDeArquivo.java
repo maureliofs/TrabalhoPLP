@@ -28,6 +28,14 @@ import java.io.BufferedWriter;
 import java.io.EOFException;
 import java.io.BufferedReader;
 
+/**
+ * Classe responsavel por toda a manipulação do arquivo onde
+ * sera guardado todo o banco de dados do programa.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
+ */
+
 public class ManipuladorDeArquivo implements Serializable{ //criando classe
 
     private static final long serialVersionUID = -5999520871774420561L;
@@ -109,7 +117,7 @@ public class ManipuladorDeArquivo implements Serializable{ //criando classe
      * Metodo responsavel por ler o arquivo 
      * e devolver para o usuário o veiculo buscado.
      * 
-     * @return List<Veiculo> veiculos
+     * @return List
      */
     public List<Veiculo> leVeiculos() {
         List<Veiculo> veiculos = new ArrayList<Veiculo>();

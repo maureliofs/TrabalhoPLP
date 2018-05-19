@@ -9,6 +9,15 @@
 
 package entidade;
 
+
+/**
+ * Classe responsavel por descrever a sub classe Moto e
+ * usando o conceito de herança para herdar os atributos da
+ * classe pai (Veiculo), além de implementar seus atributos especificos.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
+ */
 public class Moto extends Veiculo {
 
     /**
@@ -29,6 +38,7 @@ public class Moto extends Veiculo {
      * @param tipoCombustivel tipo de combustivel da moto
      * @param placa placa da moto
      * @param cilindradas numero referente às cilindradas da moto
+     * @param data data do cadastro da moto
      */
     public Moto(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, int cilindradas, String data) {
         super(id, marca, modelo, ano, cor, potencia, tipoCombustivel, placa, data);

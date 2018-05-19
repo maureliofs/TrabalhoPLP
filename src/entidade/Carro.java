@@ -37,6 +37,7 @@ public class Carro extends Veiculo {
      * @param tipoCombustivel tipo de combustivel do carro
      * @param placa placa do carro
      * @param qtdePortas quantidade de portas que o carro possui
+     * @param data data do cadastro do carro
      */
     public Carro(int id, String marca, String modelo, int ano, String cor, int potencia, String tipoCombustivel, String placa, int qtdePortas, String data) {
         super(id, marca, modelo, ano, cor, potencia, tipoCombustivel, placa, data);

@@ -14,6 +14,9 @@ import java.text.SimpleDateFormat;
 /**
  * Esta classe descreve um objeto DataSistema. É usadada pra 
  * gerar uma string no formato de data.
+ * 
+ * @author Marco Aurelio Ferreira de Sousa
+ * @version 1.0
  */
 public class DataSistema {
 
